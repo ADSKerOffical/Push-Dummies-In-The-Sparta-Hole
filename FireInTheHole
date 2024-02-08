@@ -1,61 +1,59 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
-
-local Window = OrionLib:MakeWindow({Name = "Budgie Hub | Push the dummies", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
-
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+local OrionLib = loadstring(game:HttpGet((ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('OqxdWooeCFIIYLfqNneUElmZLNxWziwjYvspRKEnVWCOsYPJWBMIZojaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2lvbmx5dXNlZ2l0aHViZm9ybWNtb2RzLzEtTGluZS1TY3JpcHRzL21haW4vTW9iaWxlJTIwRnJpZW5kbHklMjBPcmlvbg=='))))()
+local Window = OrionLib:MakeWindow({Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('ziuNEieZXKtgZOdjJxROTBYbTdLFkxKmXPZtGBmOtkHaKJCmjValTxvQnVkZ2llIEh1YiB8IFB1c2ggdGhlIGR1bW1pZXM='), HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('oiTPhCZabMegLaMOJGiHbDCtkCmEDFHIQUYvamwWXocAJukAJKGeGeYT3Jpb25UZXN0')})
 local Tab = Window:MakeTab({
-                    Name = "Main",
-                    Icon = "http://www.roblox.com/asset/?id=4483345998",
-                    PremiumOnly = false
+Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('XOVuLLWyDQpZOlsUqapNVUkpiFkNhGzKNmHnHYTKDZZBbAaxloqqMaXTWFpbg=='),
+Icon = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('ekcvxrEjWhQRPIrokUDupzdosuTKqbOfsdiupQMNZkVWQfVSVlFoLSaaHR0cDovL3d3dy5yb2Jsb3guY29tL2Fzc2V0Lz9pZD00NDgzMzQ1OTk4'),
+PremiumOnly = false
 })
-                
 Tab:AddToggle({
-	Name = "Godmode",
-	Default = false,
-	Callback = function(Value)
-		God = Value
+Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('CnzpFKndElgwEFhfcpGBOOdCmzHpsTnwabseyqmlQbnTFxqQbHSLAAXR29kbW9kZQ=='),
+Default = false,
+Callback = function(Value)
+God = Value
 while God do
 task.wait()
 local LP = game.Players.LocalPlayer
 repeat wait() until LP.Character
 for i,v in pairs(LP.Backpack:GetChildren()) do
-   if v.Name == "SHIELD POTION" then
-       v.Parent = LP.Character
-   end
+if v.Name == ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('fLShimVlaDuLdvCXShZzXsNGoCRvtaYpOWMRHRJHVnHuvfuwPYLkbBKU0hJRUxEIFBPVElPTg==') then
+v.Parent = LP.Character
+end
 end
 end
 while God do
-   task.wait()
-   for i,v in pairs (LP.Character:GetChildren()) do
-       if v.Name == "SHIELD POTION" then
-           v:Activate()
-       end
-   end
+task.wait()
+for i,v in pairs (LP.Character:GetChildren()) do
+if v.Name == ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('KLITlAsDHNDzPhrFlLxsukZEqqJiENQOnBzLfPJflRXwnTuJtvcVqVsU0hJRUxEIFBPVElPTg==') then
+v:Activate()
 end
-	end    
+end
+end
+end    
 })
-
 Tab:AddTextbox({
-	Name = "Reach sword",
-	Default = "input",
+	Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('XaIqyabsquABDUeEjlFhyCicPKittgKaixqrwBXIRIGGtOfpjxSugZVUmVhY2ggc3dvcmQ='),
+	Default = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('IBPNbfHHfVskhuBRfXanGHdeVGIqgJHAXVkZaCLhROoQVNeOekfAiXFaW5wdXQ='),
 	TextDisappear = true,
 	Callback = function(Value)
-		for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren()) do
-  if v:isA("Tool") then
-   local a = Instance.new("SelectionBox",v.Handle)
+		for i,v in pairs(game:GetServiceezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('LROmwfdKIXZumFtgHJDYhEvGbwEeXbkKDtAQpOjxWdFGYKKelRtbuKsUGxheWVycw==').LocalPlayer.Character:GetChildren()) do
+  if v:isA(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('BlmKEPBwvJUeRZKcvqWxzWHgSeCHklIhiUVCRTnsVTkXFOsctebzgoiVG9vbA==')) then
+   local a = Instance.new(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('LqJoGNOHQeyXWoVbdqoUocBMGKiYrzWDBfJllEmzsuipCaMCReTjZETU2VsZWN0aW9uQm94'),v.Handle)
    v.Handle.Massless = true
    v.Handle.Transparency = 1
    a.Adornee = v.Handle
    v.Handle.Size = Vector3.new(Value, Value, Value) -- тут изменять
-   local selectionBox = Instance.new("SelectionBox",v.Handle)
+   local selectionBox = Instance.new(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('OiQGwwJMNaIAZryPZdQhYLeKEIcMAIDPtSooyCDcHrRHpdRgxmWAhKOU2VsZWN0aW9uQm94'),v.Handle)
    selectionBox.Adornee = v.Handle
    selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
   end
  end
 	end	  
 })
-
 Tab:AddToggle({
-	Name = "Sword Auto Click",
+	Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('YdIKCKzVRtvHErTOEsggFKkCKUuWkQaPJcXiqXbhBPFvcCZxPbuIChOU3dvcmQgQXV0byBDbGljaw=='),
 	Default = false,
 	Callback = function(Value)
 		Clicker = Value
@@ -64,30 +62,28 @@ while Clicker do
 local LP = game.Players.LocalPlayer
 repeat wait() until LP.Character
    for i,v in pairs (LP.Character:GetChildren()) do
-       if v.Name == "LinkedSword" then
+       if v.Name == ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('qmWMAAmcuVYNRpNblsZbwifaqUgHUwBzJetItlKwiGjqueSLSxewGVWTGlua2VkU3dvcmQ=') then
            v:Activate()
        end
    end
 end
 	end    
 })
-
 Tab:AddDropdown({
-	Name = "Teleport",
-	Default = "",
-	Options = {"Teleport to the top", "Vip room"},
+	Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('JRxxHEqCJzlbYYKbuXTDPDUNbHyDMMoISxPKStxsLPYoHIqLqFnpcayVGVsZXBvcnQ='),
+	Default = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('SRUdrAEVwEjwfsJYcSJsITkAgbhvlQbBASEcaGwxCUsxUcbcYMVxQnF'),
+	Options = {ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('kkVPwttDjdFvmdhgLhXRsroGyYTZUHXaHAeooOzxLuPSDnNwckjvnHVVGVsZXBvcnQgdG8gdGhlIHRvcA=='), ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('VGEZSWMIhrOBKygWsTXHTetIXMKZlwklwQMkKiifTMfYMOgojDWvGyRVmlwIHJvb20=')},
 	Callback = function(Value)
-	if Value == "Teleport to the top" then
+	if Value == ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('abnjreOyiXXhDzIpUjAYVRwztsyFPqMBgSpfMEchpupUmDVZwJJXxBdVGVsZXBvcnQgdG8gdGhlIHRvcA==') then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-35, 5669, -27)
    end
-   if Value == "Vip room" then
+   if Value == ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('EEYfsqtuSGUdHLqWfMRHSyMxwbPqPbdJcRnxUISyiTgsUxeILjmfBtVVmlwIHJvb20=') then
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-88, 5669, 40) 
    end
    end
 })
-
 Tab:AddButton({
- Name = "Remove hats",
+ Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('tFZFcUFhvoVcVIdVGjYOZugyJgyiQurSPIbUDkqkbBhLJkxFOLecBLrUmVtb3ZlIGhhdHM='),
  Callback = function()
         last_pick_sin_mrazy = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame 
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 5670, 71) 
@@ -95,20 +91,19 @@ task.wait()
     game. Players.LocalPlayer.Character.HumanoidRootPart.CFrame = last_pick_sin_mrazy
    end    
 })
-
 Tab:AddButton({
- Name = "Kill all",
+ Name = ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('sYoXFZxTYQSfYXywDRcYPmqqNPmaqaNWJNMtCdSBQNMffMmANbjCOVKS2lsbCBhbGw='),
  Callback = function()
         local range = 1000
-local player = game:GetService("Players").LocalPlayer
-game:GetService("RunService").RenderStepped:Connect(function()
+local player = game:GetService(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('CjHGYiTdueuqsHBtrQFLstrhrIYLwzaosZreGtqMeXNGRTBrahvxWRfUGxheWVycw==')).LocalPlayer
+game:GetService(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('OzjnlgnQAFxugMZGDzLuFRezaTJBypRZziWvsXHMukyVIXUCuAHFFEmUnVuU2VydmljZQ==')).RenderStepped:Connect(function()
     local p = game.Players:GetPlayers()
     for i = 2, #p do local v = p[i].Character
-local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
-            if tool and tool:FindFirstChild("Handle") then
+local tool = player.Character and player.Character:FindFirstChildOfClass(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('ufPJQXcADqtAjaKYOpLhoXklYiwTWVLwEsYcNaYSPFElBmkgvRjUERgVG9vbA=='))
+            if tool and tool:FindFirstChild(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('DQlRGrHDaLWCdUcCpdzLEmUfSbJsaTmWcqEqsSkmtPKtCMdqqRoywoeSGFuZGxl')) then
                 tool:Activate()
                 for i,v in next, v:GetChildren() do
-                    if v:IsA("BasePart") then
+                    if v:IsA(ezEdtOmOLZkXjxEoxmvsyzCSOIuPimTkjjrTtLcBNwIcqrbOtiUVOTCjlIGoGHpfaLnBcq('tFfiXVphhmYwdxFAKPxAjivYtxeHDGkvofiwYzFyAIqwfwbxriiZQxFQmFzZVBhcnQ=')) then
                         firetouchinterest(tool.Handle,v,0)
                         firetouchinterest(tool.Handle,v,1)
                     end
@@ -117,4 +112,4 @@ local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
         end
 end)
    end    
-})
+})    
